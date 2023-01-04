@@ -7,7 +7,7 @@ seo:
  social-alt: Everything a content creator needs to grow their career in this epic industry!
  url: https://kingcode.uk/ultimate-shop-for-content-creators/shop-categories/shop
  social-share_image: /images/products/hotel-collab-guide.jpg
-heading: Shop All
+heading: My favorites
 category-1: 
   heading: all
   link: /shop-categories/shop
@@ -39,33 +39,10 @@ fonts:
  product-title-font: Shrikhand, cursive
  product-description-font: Raleway, sans-serif
  cta-font: brushwell
----
+---   
 
-<section id="content-blocks-{{forloop.index0}}">
   <section class="padded-sides grid-center all-products">
     <div class="blog-loop blog-masonry padded-1">
-      {% assign all_products = site.products | where: 'all_products', true %}
-      {% for shop in all_products %}
-      <div class="masonry-item ">
-        <a class="padded"href="{{shop.url}}">
-          <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
-            <div class="blog-hover-overlay">
-              <div class="hover-inner center">
-                <h5 class=""> {{shop.shop-hero.cta}} </h5>
-              </div>
-            </div>
-          </div>
-          <div class="shop-bump left grid">
-            <h3>{{shop.shop-hero.product-name}}</h3>
-            <p class=""><span class="product-price"> {{shop.shop-hero.price}}</span> <span class="compare-at-price">{{shop.shop-hero.discounted-price}} </span></p>
-            <p>{{shop.shop-hero.product-description-summery}}</p>
-            <div class="stars">
-              <p>{{shop.shop-hero.product-rating}}</p>
-            </div>
-          </div>
-        </a>
-      </div> 
-      {% endfor %}
       {% assign all_affiliates = site.affiliates | where: 'all_affiliates', true %}
       {% for shop in all_affiliates %}
       <div class="masonry-item ">
@@ -89,5 +66,4 @@ fonts:
       </div> 
       {% endfor %}
     </div>
-   </section>
-</section>
+   </section>   

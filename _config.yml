@@ -19,10 +19,10 @@ defaults:
       layout: "product-pages"
   -
     scope:
-      path: "affiliates"
+      path: "/affiliates"
       type: "pages" 
     values:
-      layout: "affiliates" # overrides previous default layout
+      layout: "affiliates-page" # overrides previous default layout
 
 collections:
   products:
@@ -33,6 +33,7 @@ collections:
     enabled: true
     output: true
     icon: monetization_on
+    
 _inputs:
   textarea_html:
     options:
