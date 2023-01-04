@@ -1,2 +1,2 @@
-# ttl-blog-and-shop-add-on-template
+# ttl-affiliate-blog-and-shop-add-on-template
  
