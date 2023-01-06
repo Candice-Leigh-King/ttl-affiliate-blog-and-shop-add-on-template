@@ -44,7 +44,6 @@ fonts:
   
 <section id="content-blocks-{{forloop.index0}}">
   <section class="padded-sides grid-center all-products">
-    <div class=" padded-1 grid">
       {% assign all_affiliates = site.affiliates | where: 'all_affiliates', true %}
       {% for shop in all_affiliates %}
       <div class="padded-1 col-4_sm-6_xs-12">
@@ -67,6 +66,5 @@ fonts:
         </a>
       </div> 
       {% endfor %}
-    </div>
    </section>
 </section>
