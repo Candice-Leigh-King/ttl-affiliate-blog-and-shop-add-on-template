@@ -12,14 +12,9 @@ category-1:
   heading: all
   link: /shop-categories/shop
 category-2: 
-  heading: free downloads
-  link: /shop-categories/freebies
-category-3: 
-  heading: e-books
-  link: /shop-categories/e-books
-category-4: 
   heading: favorites
   link: /shop-categories/affiliates
+category-symbol: ○
 colors:
  heading-color: '#859f9f'
  product-title-color: 'white'
@@ -34,11 +29,16 @@ colors:
  product-description-background-color: '#BCCACA'
  price-background-color: '#9b4851'
  discounted-price-background-color: 'transparent'
+ category-bar-color: '#859f9f'
+ category-text-color: '#859f9f'
+ category-text-hover-color: '#d2966d'
+ category-dot-color: '#859f9f'
 fonts:
  heading-font: Shrikhand, cursive
  product-title-font: Shrikhand, cursive
  product-description-font: Raleway, sans-serif
  cta-font: brushwell
+ category-font: brushwell
 ---
 
 <section id="content-blocks-{{forloop.index0}}">
@@ -46,7 +46,7 @@ fonts:
     <div class=" padded-1 grid">
       {% assign all_products = site.products | where: 'all_products', true %}
       {% for shop in all_products %}
-      <div class="padded-1 col-4">
+      <div class="padded-1 col-4_sm-6_xs-12">
         <a class="padded"href="{{shop.url}}">
           <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
             <div class="blog-hover-overlay">
@@ -68,7 +68,7 @@ fonts:
       {% endfor %}
       {% assign all_affiliates = site.affiliates | where: 'all_affiliates', true %}
       {% for shop in all_affiliates %}
-      <div class="padded-1 col-4">
+      <div class="padded-1 col-4_sm-6_xs-12">
         <a class="padded"href="{{shop.url}}">
           <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
             <div class="blog-hover-overlay">

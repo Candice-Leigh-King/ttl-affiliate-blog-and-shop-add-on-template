@@ -60,6 +60,27 @@ layout: default
    background-color: {{page.colors.discounted-price-background-color}};
    color: {{page.colors.discounted-price-color}};
    }
+
+  #content-blocks-{{forloop.index0}} .categories
+   {
+   border-top: 1px solid {{page.colors.category-bar-color}};
+   border-bottom: 1px solid {{page.colors.category-bar-color}};
+   color: {{page.colors.category-text-color}};
+   font-family: {{page.fonts.category-font}};
+   padding-top: 1%;
+   padding-bottom: 1%;
+   }
+
+   #content-blocks-{{forloop.index0}} .categories p {font-size: 1.5rem;}
+
+  #content-blocks-{{forloop.index0}} a:hover
+   {color: {{page.colors.category-text-hover-color}};}
+
+  #content-blocks-{{forloop.index0}} .dot
+  {
+  color: {{page.colors.category-dot-color}}
+  }
+
 </style>
 
 <section id="content-blocks-{{forloop.index0}}"> 
@@ -69,35 +90,19 @@ layout: default
     </div>
   </section>
 
-  <section class="grid-center centered padded-2  lighter-bg shop">
-    <div class="col-2_xs-4">
-     <p class="categories ">
+  <section class="grid-center center centered padded-2 categories lighter-bg shop">
+    <div class="col-5">
+     <p class="">
         <a class="" href="{{page.category-1.link}}"> {{page.category-1.heading}} </a> 
      </p>
     </div>
-    <div class="col-1 dot ">
-     <p class="categories ">●</p>
+    <div class="col-2 dot ">
+     <p class=" ">{{page.category-symbol}}</p>
     </div>
-    <div class="col-2_xs-7"> 
-     <p class="categories editable ">  
+    <div class="col-5-center"> 
+     <p class=" ">  
         <a class="" href="{{page.category-2.link}}"> {{page.category-2.heading}} </a> 
      </p>
-    </div>
-    <div class="col-1_xs-hidden dot ">
-        <p class="categories">●</p>
-    </div>
-    <div class="col-2_xs-7">
-     <p class=" categories ">
-       <a class="" href="{{page.category-3.link}}">{{page.category-3.heading}} </a>
-    </p> 
-    </div>
-    <div class="col-1_xs-1 dot ">
-        <p class="categories  ">●</p>
-    </div>
-    <div class="col-2_xs-4">
-      <p class=" categories editable  "> 
-       <a class="" href="{{page.category-4.link}}">  {{page.category-4.heading}} </a>
-     </p>  
     </div>
 </section> 
 
