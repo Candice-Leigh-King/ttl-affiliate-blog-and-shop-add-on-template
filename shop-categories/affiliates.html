@@ -41,8 +41,10 @@ fonts:
  category-font: brushwell
 ---   
 
+  
+<section id="content-blocks-{{forloop.index0}}">
   <section class="padded-sides grid-center all-products">
-    <div class="padded-1 grid">
+    <div class=" padded-1 grid">
       {% assign all_affiliates = site.affiliates | where: 'all_affiliates', true %}
       {% for shop in all_affiliates %}
       <div class="padded-1 col-4_sm-6_xs-12">
@@ -55,10 +57,10 @@ fonts:
             </div>
           </div>
           <div class="shop-bump left grid">
-            <h3>{{shop.shop-hero.product-name}}</h3>
-            <p class=""><span class="product-price"> {{shop.shop-hero.price}}</span> <span class="compare-at-price">{{shop.shop-hero.discounted-price}} </span></p>
-            <p>{{shop.shop-hero.product-description-summery}}</p>
-            <div class="stars">
+            <h3 class="col-12">{{shop.shop-hero.product-name}}</h3>
+            <p class="col-12"><span class="product-price"> {{shop.shop-hero.price}}</span> <span class="compare-at-price">{{shop.shop-hero.discounted-price}} </span></p>
+            <p class="col-12">{{shop.shop-hero.product-description-summery}}</p>
+            <div class="stars col-12">
               <p>{{shop.shop-hero.product-rating}}</p>
             </div>
           </div>
@@ -66,4 +68,5 @@ fonts:
       </div> 
       {% endfor %}
     </div>
-   </section>   
+   </section>
+</section>

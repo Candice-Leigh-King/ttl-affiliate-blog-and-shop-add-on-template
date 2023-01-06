@@ -293,231 +293,85 @@
     </header>
    
 
-    <head>
-  <script type="text/javascript">
-    // /<![CDATA[/
-    (function () {
-      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-      if (window.ShopifyBuy) {
-        if (window.ShopifyBuy.UI) {
-          ShopifyBuyInit();
-        } else {
-          loadScript();
-        }
-      } else {
-        loadScript();
-      }
-      function loadScript() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = scriptURL;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-        script.onload = ShopifyBuyInit;
-      }
-      function ShopifyBuyInit() {
-        var client = ShopifyBuy.buildClient({
-          domain: 'candyandtheking.myshopify.com',
-          storefrontAccessToken: 'cab3cab316e153c92c8cc9afe856b9fd',
-        });
-        ShopifyBuy.UI.onReady(client).then(function (ui) {
-          ui.createComponent('product', {
-            id: '6719994233013',
-            node: document.getElementById('product-component-2-1620493505885'),
-            moneyFormat: '%24%7B%7Bamount%7D%7D',
-            options: {
-      "product": {
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "calc(25% - 20px)",
-              "margin-left": "0px",
-              "margin-bottom": "50px"
-            },
-            "text-align": "center"
-          },
-          "button": {
-            "font-family": "brushwell",
-            ":hover": {
-              "background-color": "#859f9f"
-            },
-            "background-color": "#d2966d",
-            ":focus": {
-              "background-color": "#859f9f"
-            },
-            "border-radius": "90px 0px 90px 0px",
-            "padding-left": "24px",
-            "padding-right": "24px",
-            "padding-bottom": "7px",
-            "padding-top": "7px",
-            "font-size": "24px"
-          }
-        },
-        "contents": {
-          "img": false,
-          "title": false,
-          "price": false
-        },
-        "text": {
-          "button": " Download Now!"
-        },
-        "googleFonts": [
-          "Playfair Display"
-        ]
-      },
-      "productSet": {
-        "styles": {
-          "products": {
-            "@media (min-width: 601px)": {
-              "margin-left": "-20px"
-            }
-          }
-        }
-      },
-      "modalProduct": {
-        "contents": {
-          "img": false,
-          "imgWithCarousel": true,
-          "button": false,
-          "buttonWithQuantity": true
-        },
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "100%",
-              "margin-left": "0px",
-              "margin-bottom": "0px"
-            }
-          },
-          "button": {
-            "font-family": "brushwell",
-            ":hover": {
-              "background-color": "#859f9f"
-            },
-            "background-color": "#d2966d",
-            ":focus": {
-              "background-color": "#859f9f"
-            },
-            "border-radius": "0px",
-            "padding-left": "24px",
-            "padding-right": "24px"
-          }
-        },
-        "googleFonts": [
-          "Playfair Display"
-        ],
-        "text": {
-          "button": "Add to cart"
-        }
-      },
-      "option": {},
-      "cart": {
-        "styles": {
-          "button": {
-            "font-family": "brushwell",
-            ":hover": {
-              "background-color": "#859f9f"
-            },
-            "background-color": "#d2966d",
-            ":focus": {
-              "background-color": "#859f9f"
-            },
-            "border-radius": "90px 0px 90px 0px",
-          }
-        },
-        "text": {
-          "total": "Subtotal",
-          "button": " Ready to go!"
-        },
-        "googleFonts": [
-          "Playfair Display"
-        ]
-      },
-      "toggle": {
-        "styles": {
-          "toggle": {
-            "font-family": "brushwell",
-            "border-radius": "90px 0px 0px 90px",
-            "background-color": "#d2966d",
-            ":hover": {
-              "background-color": "#859f9f",
-            },
-            ":focus": {
-              "background-color": "#859f9f",
-            }
-          }
-        },
-        "googleFonts": [
-          "Playfair Display"
-        ]
-      }
-    },
-          });
-        });
-      }
-    })();
-    // /]]>/
-  </script>
-</head>
+    <style>
+  .product-background-color 
+   {background-color: #bccaca;}
 
-
-  <style>
-   .product-background-color 
-    {background-color: #bccaca;}
-
-   .shop h1
-    {
-    color: white;
-    font-family: Shrikhand, cursive;
-    }
-
-   .shop h2
-    {
-    color: #859f9f;
-    font-family: brushwell;
-    }
-
-    .shop h3, h4, h5, h6
-    {
-    color: white;
-    font-family: Raleway, sans-serif;
-    margin: 0px;
-    }
-
-    .shop p 
-    {
-    color: #2f3031;
-    font-family: Raleway, sans-serif;
-    }
-
-    .product-price 
-    {color: #9b4851;}
-
-    .compare-at-price 
-    {color: #2f3031;}
-
-   .stars p
+  .shop h1
    {
-   font-size: 1.5rem;
-   color: #859f9f;
+   color: white;
+   font-family: Shrikhand, cursive;
    }
 
+  .shop h2
+   {
+   color: #859f9f;
+   font-family: brushwell;
+   }
 
-  </style>
+   .shop h3, h4, h5, h6
+   {
+   color: white;
+   font-family: Raleway, sans-serif;
+   margin: 0px;
+   }
 
-  
+   .shop p 
+   {
+   color: #2f3031;
+   font-family: Raleway, sans-serif;
+   }
+
+   .product-price 
+   {color: #9b4851;}
+
+   .compare-at-price 
+   {color: #2f3031;}
+
+  .stars p
+  {
+  font-size: 1.5rem;
+  color: #859f9f;
+  }
+
+  .button-solid
+  {
+  border: 0px;
+  font-size: 24px;
+  letter-spacing: .3px;
+  font-family: brushwell;
+  color: white;
+  padding-right: 24px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  background-color: #d2966d;
+  /* color: ; */
+  border-radius: 90px 0px 90px 0px;
+  }
+
+  .button-solid:hover
+  {
+  border: 0px;
+  color: white;
+  background-color: #859f9f;
+  /* color: ; */
+  }
+
+ </style>
+
 <section class="shop padded product-background-color">
   <div class="padded-top grid-center">
     <div class="col-6_sm-12 shop-padded centered ">
-      <img class="box-shadow" src="/images/products/travel-for-free/get-paid-to-travel.jpg" alt="" />
+      <img class="box-shadow" src="/images/products/creator-website/blog-add-on.png" alt="" />
     </div>
     <div class="col-6_sm-12 grid">
       <div class="centered col-12">
-        <h2>How to turn your 2 week vacations into a lifestyle</h2>
-        <h1>Creating a Travel Lifestyle</h1>
-        <p> <span class="product-price"> $0.00</span><span class="compare-at-price">$8.00</span></p>
+        <h2>The best blogging template for content creator</h2>
+        <h1>Blog Add-on</h1>
+        <p> <span class="product-price"> $120</span><span class="compare-at-price">$300</span></p>
       </div> 
       <div class="left col-12">
-        <p> <h5>Want to learn how we started our journey travelling the world while making AND saving money?</h5><p><span style="font-size: var(--font-size); color: var(--color-carbon); font-family: var(--font-family); letter-spacing: 0.01rem;"><strong>Download this free guide on how to make money traveling.</strong> </span></p><p><span style="font-size: var(--font-size); color: var(--color-carbon); font-family: var(--font-family); letter-spacing: 0.01rem;">We wrote this charming ebook for you to easily download. It includes all of our secrets on how we've afforded to travel for 7 years straight.</span></p><p><span style="font-size: var(--font-size); color: var(--color-carbon); font-family: var(--font-family); letter-spacing: 0.01rem;">In this ebook, we teach you all of our secrets on how we first started making money traveling. These methods helped us travel all over the world and SAVE $50,000 in 4 years. Yup, we are going to teach you how YOU can travel, make money and SAVE money. If you apply what we teach in this ebook, you can make money traveling too.</span></p><p><span style="font-size: var(--font-size); color: var(--color-carbon); font-family: var(--font-family); letter-spacing: 0.01rem;"> <em>"I had no idea that there were so many different ways to make money traveling. This guide was really helpful."</em></span></p>
+        <p> <h5>Blog with powerful SEO Tools to back you up!</h5><p><b>Buy this add-on to turn your basic blog into eye-candy.</b></p><p><span style="font-size: var(--font-size); color: var(--color-carbon); font-family: var(--font-family); letter-spacing: 0.01rem;">Not only is is super easy to blog, our blog add-on is powered by SEO tools to support you in expanding your online reach.</span></p><p><span style="font-size: var(--font-size); color: var(--color-carbon); font-family: var(--font-family); letter-spacing: 0.01rem;"></span><em>"I LOVE this template. I love it so much that I got it for both my businesses 😂 (CazFit and FitTogether). I'm not even a content creator (I'm a personal trainer), but the web builder is SOOOOO easy to use that I don't want to use anything else. Plus I can reach out to fitness brands too because of the media kit! Never thought I could do something like that! - Caroline Greef @caz_fit</em><span style="font-size: var(--font-size); color: var(--color-carbon); font-family: var(--font-family); letter-spacing: 0.01rem;"></span></p>
         </p>
       <div class="stars">
         <p>★★★★★</p>
@@ -528,7 +382,7 @@
   </section>
   <section class="shopify-button ">
     <div class="grid-center centered"> 
-      <div id='product-component-2-1620493505885'></div>
+      <p> <a class="button-solid" href="https://kingcode.uk/products/ultimate-blog-for-content-creators-template"> Buy Now</a></p>
     </div>
   </section>  
 </section>
@@ -536,6 +390,223 @@
 
 
 
+    
+    <div class="cms-editor-link" data-cms-editor-link="cloudcannon:#content-blocks[0]">
+        <span class="cms-editor-button"></span>
+      <style>
+
+  #content-blocks-0 .blog-artical-background-color 
+    {background-color: #ffffff;}
+
+  #content-blocks-0 p
+    {
+    font-family: ;
+    color: ;
+    }
+
+  #content-blocks-0 li
+    {
+    font-family: ;
+    color: ;
+    }
+
+      
+  #content-blocks-0 h1 
+    {
+    font-size: 3rem;
+    font-family: Shrikhand, cursive;
+    color: #859f9f;
+    }
+
+  #content-blocks-0 h2 
+    {
+    font-size: 2.5rem;
+    font-family: ;
+    color: ;
+    }
+
+  #content-blocks-0 h3 
+    {
+    font-size: 2rem;
+    font-family: ;
+    color: ;
+    }
+
+  #content-blocks-0 h4 
+    {
+    font-size: 1.5rem;
+    font-family: ;
+    color: ;
+    }
+
+  #content-blocks-0 h5 
+    {
+    font-size: 1rem;
+    font-family: ;
+    color: ;
+    }
+
+  #content-blocks-0 h6 
+    {
+    font-size: 0.9rem;
+    font-family: ;
+    color: ;
+    }
+
+</style>    
+<section id="content-blocks-0" class="padded-sides grid">
+    <div class="col-12 padded blog-artical-background-color">
+       <h1 class="center">What's Included</h1>
+    </div>
+</section>
+    
+    <div class="cms-editor-link" data-cms-editor-link="cloudcannon:#content-blocks[1]">
+        <span class="cms-editor-button"></span>
+      <style>
+
+    #content-blocks-1 .blog-artical-background-color 
+      {background-color: #ffffff;}
+  
+    #content-blocks-1 p
+      {
+      font-family: Raleway, sans-serif;
+      color: #292929;
+      }
+
+    #content-blocks-1 li
+      {
+      font-family: Raleway, sans-serif;
+      color: #292929;
+      }
+  
+        
+    #content-blocks-1 h1 
+      {
+      font-size: 3rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-1 h2 
+      {
+      font-size: 2.5rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-1 h3 
+      {
+      font-size: 2rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-1 h4 
+      {
+      font-size: 1.5rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-1 h5 
+      {
+      font-size: 1rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-1 h6 
+      {
+      font-size: 0.9rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+
+</style>
+
+<section class="" id="content-blocks-1">
+    <div class="grid padded-sides">
+      <div class="col-5_sm-12 bg-image  reveal fade-left " style="background-image: url('/images/products/creator-website/content-blocks.png');">
+      </div>
+      <div class="col-7_sm-12-middle reveal fade-right padded blog-artical-background-color">
+        <h2>content blocks</h2><p><strong>This amazing Blog Add-On comes with 7 new content blocks specifically designed for content creators and bloggers. Each content block can also be used across your website!</strong></p><ul><li>Affiliate Marketing Block</li><li>Space Block</li><li>Blog Article</li><li>Embed Google Maps</li><li>3 Recent Blogs</li><li>Sign off your blogs with your signature</li></ul>
+      </div>
+    </div>
+  </section>
+    
+    <div class="cms-editor-link" data-cms-editor-link="cloudcannon:#content-blocks[2]">
+        <span class="cms-editor-button"></span>
+      <style>
+
+    #content-blocks-2 .blog-artical-background-color 
+      {background-color: #ffffff;}
+  
+    #content-blocks-2 p
+      {
+      font-family: Raleway, sans-serif;
+      color: #4c4c4c;
+      }
+
+    #content-blocks-2 li
+      {
+      font-family: Raleway, sans-serif;
+      color: #4c4c4c;
+      }
+  
+        
+    #content-blocks-2 h1 
+      {
+      font-size: 3rem;
+      font-family: ;
+      color: #859f9f;
+      }
+  
+    #content-blocks-2 h2 
+      {
+      font-size: 2.5rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-2 h3 
+      {
+      font-size: 2rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-2 h4 
+      {
+      font-size: 1.5rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-2 h5 
+      {
+      font-size: 1rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+  
+    #content-blocks-2 h6 
+      {
+      font-size: 0.9rem;
+      font-family: Shrikhand, cursive;
+      color: #859f9f;
+      }
+
+</style>
+
+<section class="" id="content-blocks-2">
+    <div class="grid  flex-flip padded-sides ">
+      <div class="col-7_sm-12-middle padded reveal fade-left blog-artical-background-color">
+        <h3>scripts</h3><p>&nbsp;</p><p>Add scripts to your head! Google Analytics, Facebook Pixel, newsletter scripts. You name it, you can have it! Also, you can add your newsletter sign up content block to every page on your website if you wish!</p><p>This is a must-have for all bloggers, And it's so easy to use. Adding all necessary scripts has never been so easy.</p>
+      </div>
+      <div class="col-5_sm-12 bg-image reveal fade-right" style="background-image: url('/images/products/creator-website/blockie.png');">
+      </div>
+    </div>
+  </section>
     
 
     <footer class="grid-center center padded-top footer-background-color featured-bg">
