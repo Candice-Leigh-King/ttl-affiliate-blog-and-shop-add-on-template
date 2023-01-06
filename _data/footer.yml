@@ -5,3 +5,8 @@ colors:
   subfooter-hover-color: '#859F9F'
 fonts:
   subfooter-font: 'Raleway, sans-serif'
+shop-requirements:
+  terms-and-conditions-heading: Ts & Cs
+  terms-and-conditions-link: /ts-cs
+  privacy-heading: Privacy Policy
+  privacy-link: /pricavy-policy
