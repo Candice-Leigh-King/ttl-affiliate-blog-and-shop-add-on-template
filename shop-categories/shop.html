@@ -43,10 +43,10 @@ fonts:
 
 <section id="content-blocks-{{forloop.index0}}">
   <section class="padded-sides grid-center all-products">
-    <div class="blog-loop blog-masonry padded-1">
+    <div class=" padded-1 grid">
       {% assign all_products = site.products | where: 'all_products', true %}
       {% for shop in all_products %}
-      <div class="masonry-item ">
+      <div class="padded-1 col-4">
         <a class="padded"href="{{shop.url}}">
           <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
             <div class="blog-hover-overlay">
@@ -68,7 +68,7 @@ fonts:
       {% endfor %}
       {% assign all_affiliates = site.affiliates | where: 'all_affiliates', true %}
       {% for shop in all_affiliates %}
-      <div class="masonry-item ">
+      <div class="padded-1 col-4">
         <a class="padded"href="{{shop.url}}">
           <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
             <div class="blog-hover-overlay">
