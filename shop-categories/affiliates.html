@@ -1,57 +1,59 @@
 ---
 layout: categories
 seo:
- title: Shop
- description: Everything a content creator needs to grow their career in this epic industry!
- keywords: content creator, influencer, shop, content creator shops
- social-alt: Everything a content creator needs to grow their career in this epic industry!
- url: https://kingcode.uk/ultimate-shop-for-content-creators/shop-categories/shop
- social-share_image: /images/products/hotel-collab-guide.jpg
+  title: Shop
+  description: >-
+    Everything a content creator needs to grow their career in this epic
+    industry!
+  keywords: content creator, influencer, shop, content creator shops
+  social-alt: >-
+    Everything a content creator needs to grow their career in this epic
+    industry!
+  url: https://kingcode.uk/ultimate-shop-for-content-creators/shop-categories/shop
+  social-share_image: /images/products/hotel-collab-guide.jpg
 heading: My favorites
-category-1: 
+category-1:
   heading: all
   link: /shop-categories/shop
-category-2: 
+category-2:
   heading: favorites
   link: /shop-categories/affiliates
 category-symbol: ○
 colors:
- heading-color: '#859f9f'
- product-title-color: 'white'
- product-price-color: 'white'
- discounted-price-color: '#9b4851'
- product-description-color: '#2f3031'
- rating-color: '#859f9f'
- cta-color: 'white'
- shop-background-color: 'white' 
- product-hover-overlay-color: '#859f9f5c' 
- border-color: 'white'
- product-description-background-color: '#BCCACA'
- price-background-color: '#9b4851'
- discounted-price-background-color: 'transparent'
- category-bar-color: '#859f9f'
- category-text-color: '#859f9f'
- category-text-hover-color: '#d2966d'
- category-dot-color: '#859f9f'
+  heading-color: '#859f9f'
+  product-title-color: '#ffffff'
+  product-price-color: '#ffffff'
+  discounted-price-color: '#9b4851'
+  product-description-color: '#2f3031'
+  rating-color: '#859f9f'
+  cta-color: '#ffffff'
+  shop-background-color: '#ffffff'
+  product-hover-overlay-color: rgba(133, 159, 159, 0.5)
+  border-color: '#ffffff'
+  product-description-background-color: '#bccaca'
+  price-background-color: '#9b4851'
+  discounted-price-background-color: rgba(0, 0, 0, 0)
+  category-bar-color: '#859f9f'
+  category-text-color: '#859f9f'
+  category-text-hover-color: '#d2966d'
+  category-dot-color: '#859f9f'
 fonts:
- heading-font: Shrikhand, cursive
- product-title-font: Shrikhand, cursive
- product-description-font: Raleway, sans-serif
- cta-font: brushwell
- category-font: brushwell
----   
-
-  
+  heading-font: Shrikhand, cursive
+  product-title-font: Shrikhand, cursive
+  product-description-font: Raleway, sans-serif
+  cta-font: brushwell
+  category-font: brushwell
+---
 <section id="content-blocks-{{forloop.index0}}">
   <section class="padded-sides grid-left all-products">
       {% assign all_affiliates = site.affiliates | where: 'all_affiliates', true %}
       {% for shop in all_affiliates %}
       <div class="padded-1 col-4_sm-6_xs-12">
-        <a class="padded"href="{{shop.url}}">
+        <a class="padded" href="{{shop.url}}">
           <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
             <div class="blog-hover-overlay">
               <div class="hover-inner center">
-                <h5 class=""> {{shop.shop-hero.cta}} </h5>
+                <h5> {{shop.shop-hero.cta}} </h5>
               </div>
             </div>
           </div>
